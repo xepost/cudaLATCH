@@ -1,0 +1,6 @@
+/media/sdb3/wd_1404/cudaLATCH-master/build/CMakeFiles/latch_affTest.dir
+/media/sdb3/wd_1404/cudaLATCH-master/build/CMakeFiles/latch_aff_cuda.dir
+/media/sdb3/wd_1404/cudaLATCH-master/build/CMakeFiles/latch_cuda.dir
+/media/sdb3/wd_1404/cudaLATCH-master/build/CMakeFiles/latch_min_test.dir
+/media/sdb3/wd_1404/cudaLATCH-master/build/CMakeFiles/latch_vo.dir
+/media/sdb3/wd_1404/cudaLATCH-master/build/CMakeFiles/latch_vo2.dir

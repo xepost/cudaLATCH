@@ -1,0 +1,2 @@
+/usr/bin/ar cr liblatch_cuda.a  CMakeFiles/latch_cuda.dir/./latch_cuda_generated_latch.cu.o CMakeFiles/latch_cuda.dir/./latch_cuda_generated_bitMatcher.cu.o
+/usr/bin/ranlib liblatch_cuda.a
