@@ -140,6 +140,7 @@ int main( int argc, char** argv ) {
     float time;
 
     gpuFacade gpu(maxKP, WIDTH, HEIGHT);
+    // gpuFacade gpu ;
     FAST(img1g, keypoints1, threshold);
     gpu.LATCH(img1g, gpu.d_D1, &(gpu.numKP1), &keypoints1);
     FAST(img2g, keypoints2, threshold); // This call to fast is concurrent with above execution.

@@ -39,6 +39,7 @@ class gpuFacade {
                     int,
                     cudaStream_t);
         void getResults(int* h_matches, int* d_matches);
-        gpuFacade(int, int, int, int);
+        gpuFacade(int,  int, int);
+        // gpuFacade(int, int, int, int);
         ~gpuFacade();
 };

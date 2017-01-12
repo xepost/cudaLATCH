@@ -80,7 +80,8 @@ int main( int argc, char** argv ) {
     int threshold = 20;
     int targetKP = 3000;
     int tolerance = 200;
-    int maxLoops = 100;//4200;
+    // int maxLoops = 100;//4200; max can be 4800 frames
+    int maxLoops = 4200;
     const bool gnuplot = true;
     double defect = 0.0;
     int extractions = 0;

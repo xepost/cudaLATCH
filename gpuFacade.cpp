@@ -62,7 +62,8 @@ gpuFacade::~gpuFacade() {
     cudaDeviceReset();
 }
 
-gpuFacade::gpuFacade(int maxKeypoints, int input_WIDTH, int input_HEIGHT, int imageSlots) {
+// gpuFacade::gpuFacade(int maxKeypoints, int input_WIDTH, int input_HEIGHT, int imageSlots) {
+gpuFacade::gpuFacade(int maxKeypoints, int input_WIDTH, int input_HEIGHT) {
     maxKP = maxKeypoints;
     WIDTH = input_WIDTH;
     HEIGHT = input_HEIGHT;

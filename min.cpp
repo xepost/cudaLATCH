@@ -47,7 +47,8 @@ int main( int argc, char** argv ) {
     size_t sizeM = maxKP * sizeof(int); // M for Matches
 
     // Host (CPU) arrays
-    int *h_K1, *h_K2;
+    float *h_K1, *h_K2;
+    // int *h_K1, *h_K2;
     cudaMallocHost((void **) &h_K1, sizeK); // Page locked memory is faster to transfer to-and-from the GPU
     cudaMallocHost((void **) &h_K2, sizeK); // (but that isnt really our bottleneck)
     int h_M1[maxKP];
@@ -57,8 +58,10 @@ int main( int argc, char** argv ) {
     // Device (GPU) pointers. You can not directly look at device memory (without transfering it back to the host, aka CPU)
     unsigned char *d_I;
     unsigned int *d_D1, *d_D2;
-    int *d_K, *d_M1, *d_M2;
+    // int *d_K, *d_M1, *d_M2;
+    int *d_M1, *d_M2;
     float *d_K, *d_mask;
+    // float  *d_mask;
     cudaCalloc((void **) &d_K, sizeK);
     cudaCalloc((void **) &d_I, sizeI);
     cudaCalloc((void **) &d_D1, sizeD);
@@ -70,6 +73,10 @@ int main( int argc, char** argv ) {
     // The patch triplet locations for LATCH fits in texture memory cache.
     cudaArray* triplets;
     initPatchTriplets(triplets);
+
+    float h_mask[64];
+
+    for (int i=0; i<64; i++) { h_mask[i] = 1.0f; }
 
     size_t pitch;
     initImage(&d_I, imgWidth, imgHeight, &pitch);

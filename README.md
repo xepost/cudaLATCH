@@ -37,3 +37,10 @@ Multi-GPU support is not currently planned. Please contact me if you have a use 
 This work is released under a Creative Commons Attribution-ShareAlike license. If you use this code in an academic work, please cite me by name ([Christopher Parker](https://github.com/csp256/)) and link to [this repository](https://github.com/csp256/cudaLATCH/).
 
 Please email me if you have any questions: csparker.work@gmail.com
+
+
+To run 
+
+./latch_vo ../drone.mp4  620
+./latch_vo2 ../drone.mp4  620
+<!-- ./latch_min_test  I1_000000.png  I1_000026.png  -->
